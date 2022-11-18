@@ -39,7 +39,7 @@
         </div>
         <div class="gallery masonry-gallery" id="lightGallery">
             <@photoTag method="list">
-                <#list photos?sort_by('name')?reverse as photo>
+                <#list photos?sort_by('id')?reverse as photo>
                   <figure class="gallery-item col-3 ${((photo.team)?length>0)?string((photo.team),'无分组')}" data-src="${photo.url!}">
                     <header class="gallery-icon">
                       <span data-fancybox="gallery" href="${photo.url!}" >
